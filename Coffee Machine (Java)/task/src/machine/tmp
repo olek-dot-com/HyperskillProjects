@@ -1,0 +1,41 @@
+Scanner scanner = new Scanner(System.in);
+        int water, milk, coffeeBeans, cups, startWater, startMilk, startCoffeeBeans;
+        double possibleWaterCups, possibleMilkCups,possibleCoffeeBeansCups;
+        System.out.println("Write how many ml of water the coffee machine has:");
+         startWater = scanner.nextInt();
+        System.out.println("Write how many ml of milk the coffee machine has:");
+         startMilk = scanner.nextInt();
+        System.out.println("Write how many grams of coffee beans the coffee machine has:");
+         startCoffeeBeans = scanner.nextInt();
+        cups = scanner.nextInt();
+        scanner.nextLine();
+        water = 200 * cups;
+        milk = 50 * cups;
+        coffeeBeans = 15 * cups;
+        possibleWaterCups = Math.floor((double) startWater/200);
+        possibleMilkCups = Math.floor((double) startMilk/50);
+        possibleCoffeeBeansCups = Math.floor((double) startCoffeeBeans/15);
+        int minCups = (int) Math.min(Math.min(possibleWaterCups,possibleMilkCups), possibleCoffeeBeansCups);
+        int additionalCups = minCups - cups;
+        if(water>startWater || milk > startMilk || coffeeBeans>startCoffeeBeans){
+            System.out.println("No I can make only " + minCups + "cup(s) of coffee");
+        }
+        else if(water + 200 < startWater && milk + 50 < startMilk && coffeeBeans + 15 < startCoffeeBeans){
+            System.out.println("Yes, I can make that amount of coffee (and even " + additionalCups + " more than that)");
+        }else if (water < startWater || milk < startMilk || coffeeBeans < startCoffeeBeans){
+            System.out.println("Yes, I can make that amount of coffee");
+        }
+
+
+//        System.out.println("Starting to make a coffee");
+//        System.out.println("Grinding coffee beans");
+//        System.out.println("Boiling water");
+//        System.out.println("Mixing boiled water with crushed coffee beans");
+//        System.out.println("Pouring coffee into the cup");
+//        System.out.println("Pouring some milk into the cup");
+//        System.out.println("Coffee is ready!");
+//
+//        System.out.println("For " + amount + " cups of coffee you will need:");
+//        System.out.println(water + " ml of water");
+//        System.out.println(milk + " ml of milk");
+//        System.out.println(beans + " g of coffee beans");
