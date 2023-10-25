@@ -1,0 +1,21 @@
+type: code
+files:
+  - name: src/Main.java
+    visible: true
+    highlight_level: NONE
+    text: "import java.time.LocalDate;\n\nclass Solution {    \n    Product convertProductDTOToProduct(ProductDTO\
+    \ dto) {\n        //your code\n    }\n}"
+    learner_created: false
+  - name: src/ProductDTO.java
+    visible: true
+    learner_created: true
+  - name: src/Product.java
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/learn/step/25623#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Thu, 21 Sep 2023 10:49:47 UTC"
+record: -1
+submission_language: java17
